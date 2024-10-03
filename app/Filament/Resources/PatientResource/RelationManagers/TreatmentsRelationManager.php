@@ -22,13 +22,16 @@ class TreatmentsRelationManager extends RelationManager
                 Forms\Components\TextInput::make('description')
                     ->required()
                     ->maxLength(255)
-                    ->columnSpan('full'),
+                    ->columnSpan('full')
+                    ->mask('99/99/9999')->placeholder('dd/mm/aaaa'),
                 Forms\Components\Textarea::make('notes')
                     ->columnSpanFull()
                     ->required(),
                 Forms\Components\TextInput::make('price')
                     ->prefix('R$')
                     ->numeric()
+                    ->mask('99.999,99')
+                    ->placeholder('0,00')
                     ->required(),
             ]);
     }

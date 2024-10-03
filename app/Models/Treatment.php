@@ -12,7 +12,7 @@ class Treatment extends Model
     use HasFactory;
 
     protected $casts = [
-        'price' => MoneyCast::class,
+        // 'price' => MoneyCast::class,
     ];
 
     public function patient(): BelongsTo
